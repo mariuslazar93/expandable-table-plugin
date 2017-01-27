@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Expandable Table with jQuery</title>
+    <link rel="stylesheet" href="font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="text-center spacer-bottom">Expandable table component</h1>
+    <section class="spacer-bottom">
+        <h1 class="spacer-bottom">#1 Table with 1 nested rows</h1>
+        <table id="firstTable" class="table expandable-table">
+            <thead>
+                <tr>
+                    <th class="empty"></th>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>discount</th>
+                    <th>total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="first-row">
+                    <td colspan="6">
+                        <a href="#" class="btn btn-primary btn-xs" data-expand-target="Customer1">
+                            <span class="fa fa-minus-square" aria-hidden="true"></span>
+                        </a>
+                        <span>Customer 1</span>
+                    </td>
+                </tr>
+                <tr class="second-row Customer1 tr-show" data-expand-source="Customer1">
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+                <tr class="second-row Customer1 tr-show" data-expand-source="Customer1">
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+                <tr class="first-row Store2">
+                    <td colspan="6">
+                        <a href="#" class="btn btn-primary btn-xs" data-expand-target="Customer2">
+                            <span class="fa fa-minus-square" aria-hidden="true"></span>
+                        </a>
+                        <span>Customer 2</span>
+                    </td>
+                </tr>
+                <tr class="second-row Customer2 tr-show" data-expand-source="Customer2">
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+                <tr class="second-row Customer2 tr-show" data-expand-source="Customer2">
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="spacer-bottom">
+        <h1 class="spacer-bottom">#2 Table with 2 nested rows</h1>
+        <table id="secondTable" class="table expandable-table">
+            <thead>
+                <tr>
+                    <th class="empty"></th>
+                    <th class="empty"></th>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>discount</th>
+                    <th>total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="first-row">
+                    <td colspan="7">
+                        <a href="#" class="btn btn-primary btn-xs" data-expand-target="Store1">
+                            <span class="fa fa-minus-square" aria-hidden="true"></span>
+                        </a>
+                        <span>Store 1</span>
+                    </td>
+                </tr>
+                <tr class="second-row Store1 tr-show" data-expand-source="Store1">
+                    <td></td>
+                    <td colspan="6">
+                        <a href="#" class="btn btn-primary btn-xs" data-expand-target="Customer1">
+                            <span class="fa fa-minus-square" aria-hidden="true"></span>
+                        </a>
+                        <span>Customer 1</span>
+                    </td>
+                </tr>
+                <tr class="third-row Customer1 tr-show" data-expand-source="Customer1">
+                    <td></td>
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+                <tr class="third-row Customer1 tr-show" data-expand-source="Customer1">
+                    <td></td>
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+                <tr class="first-row">
+                    <td colspan="7">
+                        <a href="#" class="btn btn-primary btn-xs" data-expand-target="Store2">
+                            <span class="fa fa-minus-square" aria-hidden="true"></span>
+                        </a>
+                        <span>Store 2</span>
+                    </td>
+                </tr>
+                <tr class="second-row Store2 tr-show" data-expand-source="Store2">
+                    <td></td>
+                    <td colspan="6">
+                        <a href="#" class="btn btn-primary btn-xs" data-expand-target="Customer2">
+                            <span class="fa fa-minus-square" aria-hidden="true"></span>
+                        </a>
+                        <span>Customer 2</span>
+                    </td>
+                </tr>
+                <tr class="third-row Customer2 tr-show" data-expand-source="Customer2">
+                    <td></td>
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+                <tr class="third-row Customer2 tr-show" data-expand-source="Customer2">
+                    <td></td>
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+                <tr class="second-row Store2 tr-show" data-expand-source="Store2">
+                    <td></td>
+                    <td colspan="6">
+                        <a href="#" class="btn btn-primary btn-xs" data-expand-target="Customer3">
+                            <span class="fa fa-minus-square" aria-hidden="true"></span>
+                        </a>
+                        <span>Customer 3</span>
+                    </td>
+                </tr>
+                <tr class="third-row Customer3 tr-show" data-expand-source="Customer3">
+                    <td></td>
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+                <tr class="third-row Customer3 tr-show" data-expand-source="Customer3">
+                    <td></td>
+                    <td></td>
+                    <td>test-id</td>
+                    <td>test-name</td>
+                    <td>test-price</td>
+                    <td>test-discount</td>
+                    <td>test-total</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
